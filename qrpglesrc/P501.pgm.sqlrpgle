@@ -7,19 +7,21 @@ end-pi;
 
 dcl-s theCharVar Char(52);
 
-/copy 'qrpgleref/P434.rpgleinc'
-/copy 'qrpgleref/P218.rpgleinc'
+/copy 'qrpgleref/P240.rpgleinc'
+/copy 'qrpgleref/P430.rpgleinc'
+/copy 'qrpgleref/P21.rpgleinc'
 
-dcl-ds T365 ext qualified;
+dcl-ds theTable extname('T1206') qualified;
 end-ds;
 
-EXEC SQL SELECT * INTO :T365 FROM T365 LIMIT 1;
+EXEC SQL SELECT * INTO :theTable FROM T1206 LIMIT 1;
 
 theCharVar = 'Hello from P501';
 dsply theCharVar;
 callp localProc();
-P434();
-P218();
+P240();
+P430();
+P21();
 return;
 dcl-proc localProc;
   theCharVar = 'Hello from P501 in the procedure';
