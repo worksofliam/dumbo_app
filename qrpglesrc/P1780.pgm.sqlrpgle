@@ -7,22 +7,18 @@ end-pi;
 
 dcl-s theCharVar Char(52);
 
-/copy 'qrpgleref/P188.rpgleinc'
-/copy 'qrpgleref/P1418.rpgleinc'
-/copy 'qrpgleref/P1526.rpgleinc'
+/copy 'qrpgleref/P527.rpgleinc'
+/copy 'qrpgleref/P1091.rpgleinc'
+/copy 'qrpgleref/P1327.rpgleinc'
 
-dcl-ds theTable extname('T1059') qualified;
+dcl-ds T1550 ext qualified;
 end-ds;
 
-EXEC SQL SELECT * INTO :theTable FROM T1059 LIMIT 1;
+EXEC SQL SELECT * INTO :T1550 FROM T1550 LIMIT 1;
 
 theCharVar = 'Hello from P1780';
 dsply theCharVar;
-callp localProc();
-P188();
-P1418();
-P1526();
+P527();
+P1091();
+P1327();
 return;
-dcl-proc localProc;
-  theCharVar = 'Hello from P1780 in the procedure';
-end-proc;

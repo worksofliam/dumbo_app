@@ -7,18 +7,18 @@ end-pi;
 
 dcl-s theCharVar Char(52);
 
-/copy 'qrpgleref/P408.rpgleinc'
-/copy 'qrpgleref/P715.rpgleinc'
-/copy 'qrpgleref/P1560.rpgleinc'
+/copy 'qrpgleref/P1073.rpgleinc'
+/copy 'qrpgleref/P290.rpgleinc'
+/copy 'qrpgleref/P289.rpgleinc'
 
-dcl-ds theTable extname('T707') qualified;
+dcl-ds T348 ext qualified;
 end-ds;
 
-EXEC SQL SELECT * INTO :theTable FROM T707 LIMIT 1;
+EXEC SQL SELECT * INTO :T348 FROM T348 LIMIT 1;
 
 theCharVar = 'Hello from P2178';
 dsply theCharVar;
-P408();
-P715();
-P1560();
+P1073();
+P290();
+P289();
 return;

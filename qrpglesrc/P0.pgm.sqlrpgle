@@ -8,10 +8,10 @@ end-pi;
 dcl-s theCharVar Char(52);
 
 
-dcl-ds T773 ext qualified;
+dcl-ds theTable extname('T820') qualified;
 end-ds;
 
-EXEC SQL SELECT * INTO :T773 FROM T773 LIMIT 1;
+EXEC SQL SELECT * INTO :theTable FROM T820 LIMIT 1;
 
 theCharVar = 'Hello from P0';
 dsply theCharVar;
