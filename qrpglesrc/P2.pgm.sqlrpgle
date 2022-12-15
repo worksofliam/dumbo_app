@@ -10,10 +10,10 @@ dcl-s theCharVar Char(52);
 /copy 'qrpgleref/P1.rpgleinc'
 /copy 'qrpgleref/P0.rpgleinc'
 
-dcl-ds T72 ext qualified;
+dcl-ds T490 ext qualified;
 end-ds;
 
-EXEC SQL SELECT * INTO :T72 FROM T72 LIMIT 1;
+EXEC SQL SELECT * INTO :T490 FROM T490 LIMIT 1;
 
 theCharVar = 'Hello from P2';
 dsply theCharVar;
